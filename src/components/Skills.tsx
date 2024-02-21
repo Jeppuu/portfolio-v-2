@@ -5,6 +5,7 @@ export default function Skills() {
     "HTML",
     "CSS",
     "JavaScript",
+    "TypeScript",
     "React",
     "Redux",
     "Next JS",
