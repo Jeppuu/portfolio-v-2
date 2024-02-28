@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import ThemesBtn from "./ThemeBtn";
 
 export default function Nav() {
   return (
@@ -20,6 +21,7 @@ export default function Nav() {
             Projects
           </button>
         </Link>
+        <ThemesBtn />
       </div>
     </nav>
   );
