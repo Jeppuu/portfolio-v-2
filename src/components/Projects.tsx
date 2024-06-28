@@ -35,22 +35,28 @@ const Project: React.FC<ProjectProps> = ({ link, imgSrc, title, desc }) => {
 export default function Projects() {
   const projectsData = [
     {
+      link: "https://young-nervous-move.glitch.me/",
+      imgSrc: "/choropleth.png",
+      title: "USA Educational Attainment",
+      desc: " An interactive choropleth map in D3.js",
+    },
+    {
       link: "https://ossified-zany-glockenspiel.glitch.me/",
       imgSrc: "/heatmap.png",
       title: "Global temperature heat map",
-      desc: "A heat map build with three.js",
+      desc: "A heat map build with D3.js",
     },
     {
       link: "https://lowly-laced-volleyball.glitch.me/",
       imgSrc: "/scatterplot.png",
       title: "Doping chart",
-      desc: "A scatterplot chart build with three.js",
+      desc: "A scatterplot chart build with D3.js",
     },
     {
       link: "https://wise-extreme-skateboard.glitch.me/",
       imgSrc: "/barchart.png",
       title: "USA GDP Chart",
-      desc: "A bar chart build with three.js",
+      desc: "A bar chart build with D3.js",
     },
     {
       link: "https://digipedia.glitch.me/",
