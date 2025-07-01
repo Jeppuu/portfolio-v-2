@@ -1,28 +1,71 @@
 import React from "react";
-import Image from "next/image";
+import TextGradient from "./TextGradient";
+import About from "./About";
+import Link from "next/link";
+import Skills from "./Skills";
+import StrongPoints from "./StrongPoints";
+import CurrentlyExploring from "./CurrentlyExploring";
 
-export default function Landing() {
+const Landing = React.memo(() => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="w-full my-8 px-4 flex flex-col md:flex-row justify-top md:justify-start items-stretch relative gap-2">
-      <div className="flex justify-center items-center h-80 md:h-96 w-full md:w-1/2 p-4 relative">
-        <Image
-          src="/avatar-img.png"
-          fill
-          style={{ objectFit: "contain" }}
-          alt="Picture of the developer"
-          className="max-w-full max-h-full relative z-10"
-        />
-        {/* shadow for the image */}
-        <div className="absolute h-14 bottom-4 left-1/2 -translate-x-1/2 w-3/4 z-0 bg-[#C3DFE1] dark:bg-[#1F7A7E] shadow-md rounded-xl transform rotate-1"></div>
-      </div>
-      <div className="flex flex-col justify-center items-center md:h-auto w-full md:w-1/2 p-4 md:pl-0 gap-2">
-        <h1 className="dark:text-[#f2f2f2] uppercase drop-shadow font-bold text-2xl md:text-4xl leading-normal md:leading-relaxed text-center md:text-left">
-          Hello, meet <span className="text-[#69B2B7]">Jenna</span> <br /> a
-          modern
-          <span className="text-[#69B2B7]"> full stack developer </span>
-          building the web
-        </h1>
-      </div>
-    </div>
+    <>
+      <section className="w-full flex flex-col items-center justify-center min-h-[100vh] py-hero px-4">
+        <div className="w-full max-w-3xl mx-auto flex flex-col items-start text-left">
+          <h1
+            className="font-space font-semibold text-3xl md:text-5xl lg:text-6xl text-text drop-shadow-lg leading-tight mb-6"
+            aria-label="Hi! I'm Jenna, Full-stack space cadet"
+          >
+            Hi! I'm
+            <br />
+            <TextGradient className="block font-extrabold text-6xl md:text-8xl lg:text-9xl">
+              Jenna
+            </TextGradient>
+            <span className="block text-2xl md:text-4xl font-semibold mb-2 text-pink uppercase tracking-wider">
+              Full-stack space cadet
+            </span>
+            <p className="block mt-2 text-lg md:text-xl text-text max-w-2xl ">
+              Welcome to my home planet! ✨
+            </p>
+          </h1>
+          <div className="flex flex-row gap-4 mt-4">
+            <Link href="#about" scroll={false}>
+              <button
+                onClick={scrollToAbout}
+                className="px-6 py-2 rounded-full border-2 border-lavender/90 text-lavender hover:text-lavender/80 font-bold shadow hover:border-lavender/40 transition"
+              >
+                Jenna who? ↓
+              </button>
+            </Link>
+            <Link href="/projects" passHref>
+              <button
+                className="px-6 py-2 rounded-full bg-pink text-crust font-bold shadow hover:bg-pink/80 transition"
+                type="button"
+              >
+                My projects →
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section
+        id="about"
+        className="w-full flex flex-col gap-8 items-center justify-center py-4 "
+      >
+        {/* About section below */}
+        <About />
+        <Skills />
+        <StrongPoints />
+        <CurrentlyExploring />
+      </section>
+    </>
   );
-}
+});
+
+export default Landing;
