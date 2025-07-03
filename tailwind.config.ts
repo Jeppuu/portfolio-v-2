@@ -97,6 +97,7 @@ const config: Config = {
         nebulaBlob3: "nebulaBlob3 52s ease-in-out infinite alternate",
         marquee: "marquee 24s linear infinite",
         marqueeReverse: "marqueeReverse 24s linear infinite",
+        bounceSlow: "bounce 3s infinite",
       },
       keyframes: {
         gradientShift: {
@@ -126,6 +127,16 @@ const config: Config = {
         marqueeReverse: {
           "0%": { transform: "translateX(-50%)" },
           "100%": { transform: "translateX(0)" },
+        },
+        bounce: {
+          "0%, 100%": {
+            transform: "translateY(-25%)",
+            animationTimingFunction: "cubic-bezier(0.8,0,1,1)",
+          },
+          "50%": {
+            transform: "none",
+            animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+          },
         },
       },
       backgroundSize: {

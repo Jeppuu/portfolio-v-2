@@ -11,6 +11,7 @@ const skillList = [
   "Tailwind CSS",
   "Material UI",
   "C#",
+  ".NET",
   "Express",
   "Node JS",
   "REST API",

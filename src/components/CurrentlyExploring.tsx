@@ -15,20 +15,20 @@ const CurrentlyExploring = React.memo(() => {
               href="https://evitec.com/"
               rel="noopener noreferrer"
               target="_blank"
-              className="text-lavender font-semibold transition duration-500 hover:text-lavender/80"
+              className="text-pink font-semibold transition duration-500 hover:text-lavender/80"
             >
               Junior Full-stack Engineer at Evitec Solutions.
             </Link>
           </span>
           <span>
-            My mission is to build powerful, user-friendly fintech solutions!
+            My mission is building powerful, user-friendly fintech solutions!
           </span>
           <span>
             <Link
               href="https://evitec.com/solutions/evitec-solutions-power-lending/"
               rel="noopener noreferrer"
               target="_blank"
-              className="text-lavender font-semibold transition duration-500 hover:text-lavender/80"
+              className="text-blue font-semibold transition duration-500 hover:text-lavender/80"
             >
               My current mothership
             </Link>{" "}

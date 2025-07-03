@@ -31,14 +31,7 @@ const Nav = React.memo(() => {
             </Link>
           );
         })}
-        {/* Language toggle placeholder */}
-        <button
-          className="ml-2 py-2 px-4 text-text hover:border-b-2 hover:border-lavender/60 border-b-2 border-transparent transition-colors duration-200"
-          type="button"
-          aria-label="Toggle language"
-        >
-          EN/FI
-        </button>
+        {/* Add Language toggle here */}
       </div>
     </nav>
   );

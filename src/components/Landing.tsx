@@ -31,7 +31,7 @@ const Landing = React.memo(() => {
               Full-stack space cadet
             </span>
             <p className="block mt-2 text-lg md:text-xl text-text max-w-2xl ">
-              Welcome to my home planet! ✨
+              Welcome to my home planet! 🪐✨
             </p>
           </h1>
           <div className="flex flex-row gap-4 mt-4">
